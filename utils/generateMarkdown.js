@@ -35,67 +35,94 @@ const license = [
     },
     {
       name: "None",
-      img: "",
+      img: "There is no license for this project",
       link: "",
     },
   ];
 
 
-function renderLicenseBadge() {
-  license.forEach(function(){
-   if (license.name === answers.license) {
-     licImg =  license.img;
+function renderLicenseBadge(answers) {
+  license.forEach(function(item){
+   if (item.name === answers.license) {
+     licImg =  item.img;
+
    };
   }
-  )};
+  )
+
+
+
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink() {
-  license.forEach(function(){
-  if (license.name === answers.license) {
-    licLink = license.link;
+function renderLicenseLink(answers) {
+  license.forEach(function(item){
+
+  if (item.name === answers.license) {
+    licLink = item.link;
+    
   };
 }
-)};
+)
+};
 
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection() {
+// function renderLicenseSection() {
  // renderLicenseBadge(answers);
  // renderLicenseLink(answers);
-   licEl = `${licImg} <a href="${licLink}>${licLink}</a>`
-}
+//    licEl = `${licImg} <a href="${licLink}>${licLink}</a>`
+// }
 // renderLicenseSection();
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  // renderLicenseBadge(answers);
-  // renderLicenseLink(answers);
 
-  // renderLicenseSection(answers)
+  renderLicenseLink(answers);
+  renderLicenseBadge(answers);
 
   return `# ${answers.title}
-  ## DESCRIIPTION
+
+  ## Description
   ${answers.description}
+
   ## Table of Contents
 
+  -[Installation](#Installation)\n
+  -[Usage](#Usage)\n
+  -[License](#License)\n
+  -[Contributing](#Contributing)\n
+  -[Testing](#Testing)\n
+  -[Questions](#Questions)\n
+
   ## Installation
-  ${answers.install}
-  </p>
+
+  ${answers.install} 
+  
   ## Usage
+
   ${answers.usage}
+
   ## License
-  ${licEl}
+
+  ${licImg}  ${licLink}
+ 
+
   ## Contributing
+  
   ${answers.contribute}
-  ## Tests
+
+  ## Testing
+
   ${answers.tests}
+
   ## Questions:
-  Contact me for questions:
-  GitHub: <a href="https://github.com/${answers.github}">${answers.github}</a>
-  Email: <a href="mailto:${answers.email}>${answers.email}</a>
+
+  Contact me for questions:\n
+  GitHub Profile: https://github.com/${answers.github}\n
+  Email: ${answers.email}\n
 `;
 }
 

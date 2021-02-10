@@ -30,7 +30,7 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
             type: "list",
             message: "What is the license for your project?",
             name: "license",
-            choices: ["MIT", "GPL", "Apache", "BSD", "none"],
+            choices: ["MIT", "GPL", "Apache", "BSD", "None"],
         },
         {
             type: "input",
