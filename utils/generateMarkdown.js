@@ -68,14 +68,6 @@ function renderLicenseLink(answers) {
 };
 
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection() {
- // renderLicenseBadge(answers);
- // renderLicenseLink(answers);
-//    licEl = `${licImg} <a href="${licLink}>${licLink}</a>`
-// }
-// renderLicenseSection();
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
@@ -107,7 +99,8 @@ function generateMarkdown(answers) {
 
   ## License
 
-  ${licImg}  ${licLink}
+  Click badge for license info:\n
+  <a href="${licLink}">${licImg}</a>
  
 
   ## Contributing
@@ -122,7 +115,7 @@ function generateMarkdown(answers) {
 
   Contact me for questions:\n
   GitHub Profile: https://github.com/${answers.github}\n
-  Email: ${answers.email}\n
+  Email: <a href="mailto:${answers.email}"> ${answers.email}</a>\n
 `;
 }
 
