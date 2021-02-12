@@ -21,6 +21,8 @@ After answering all the questions a markdown file, with the name of the project 
 
 Here is a video displaying how to use the program:
 
+![walkthrough video](images/READMEGeneratorWalkThrough.mp4)
+
 <video width="320" height="240" controls>
   <source src="images/READMEGeneratorWalkThrough.mp4" type="video/mp4">
 </video>
