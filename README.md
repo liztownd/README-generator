@@ -21,10 +21,8 @@ After answering all the questions a markdown file, with the name of the project 
 
 Here is a video displaying how to use the program:
 
-![walkthrough video](images/READMEGeneratorWalkThrough.mp4)
+<a href="https://drive.google.com/file/d/1SOLVzZnlEDEIdOIPBlZFYRDJ_TGki4gL/view">Click  for video!</a>
 
-<video width="320" height="240" controls>
-  <source src="images/READMEGeneratorWalkThrough.mp4" type="video/mp4">
-</video>
+## The Code
 
-
+This project was created using the module method - the index file holds the questions and the write file function, but the file is actually generated in the generateMarkdown.js file.
